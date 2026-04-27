@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  
+  --color-accent: #FF0000;
+  --color-accent-dark: #CC0000;
+  --color-zinc-950: #0A0A0A;
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-950 text-slate-100 font-sans antialiased;
+  }
+}
+
+.glass-morphism {
+  @apply bg-slate-900/40 backdrop-blur-xl border border-white/5;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-500;
+}
+
+.accent-glow {
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
+}
+
+.accent-glow-strong {
+  box-shadow: 0 0 50px rgba(255, 0, 0, 0.4);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+html {
+  scroll-behavior: smooth;
+}
